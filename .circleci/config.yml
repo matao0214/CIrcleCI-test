@@ -14,17 +14,9 @@ jobs:
       - checkout
       - run: echo "A more familiar hi"
       - run: sleep 29
-  three:
-    docker:
-      - image: circleci/ruby:2.4.1
-    steps:
-      - checkout
-      - run: echo "A more familiar hi"
-      - run: sleep 28
 workflows:
   version: 2
   all:
     jobs:
       - one
       - two
-      - three
